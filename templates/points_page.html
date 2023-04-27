@@ -6,6 +6,17 @@
 </head>
 <body>
 <h2>Points</h2>
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+<form action="/data" method = "POST">
+    <form action="/data" method = "POST">
+        <p>Name <input type = "text" name = "Name" /></p>
+        <p>Points <input type = "number" name = "Points" /></p>
+        <p><input type = "submit" value = "Submit" /></p>
+    </form>
+</form>
 <p align="center"><a href=/ ><button class=grey style="height:75px;width:150px">Back</button></a></p>
 </body>
 </html>
